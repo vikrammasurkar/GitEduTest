@@ -11,3 +11,131 @@ D)Case Study:Dominioun EnterPrise
 E)Git Features
 F)Git Operations And Commands
 
+
+
+COMMANDS
+
+1)git init (To initialize repo.its imp when want to work in any folder /repo)
+
+2)git remote add origin "git@github.com:vikrammasurkar/GitEduTest.git"
+													(Syncing Repository to local to remote repository(Simply connecting local to remote))
+
+3)git pull origin master						  (To Pull the Files From RR)
+
+4) git status										 (To Check Which Files Are Updated or Untracked files(RED COLOR ) And not added to RR)
+
+5)git add edu1.txt											(To Add untracked filrs to index it ad only one listed file like edu1.txt )
+
+6) git status 												(GREEN COLOR Says files Are Indexed And tracked..and ready to commit)
+
+7) git commit -m "Message -- Added edu1.txt and 1_GIT_Edureka.txt to LR :First commit"   ( First Commit Added Single File )
+
+8)git add -A 													 (Like Point no 5--it add multiple files to index area )
+
+9)git status 													(GREEN COLOR Says files Are Indexed And tracked..and ready to commit)
+
+10)git commit -a -m "Added Multiple Files together To LR"        ( Second Commit Added Multiple File )
+
+11) git log   							(Shows Date time Auther All Commits..)
+
+
+-------------------------------------------------------------------------------------
+BRANCHING.....Paraller Development
+
+12) git branch FirstBranch					(Create Branch)//all files and folders from master branch are coppied to FirstBranch.
+
+13)git checkout FirstBranch					(Switch to Branch)
+//create branch .checkout o branch ..add files in folder..what we do in this FirstBranch is not affected to master branch.
+14)
+
+
+-------------------------------------------------------------
+MERGING
+
+Combining work of different branches all together..
+
+While merging any thing in master  branch .checkout in master branch first
+
+15)git merge FirstBranch
+
+16)cat edu4.txt    (show file content)
+
+ // if we made any changes in Branch is it not affected to master branch till we merge it.
+
+ -------------------------------------
+ REBASING   
+ This Is Also a way of cmbining work of different branches.it can be used to make a linear sequence of commit
+
+
+
+//added edu5.txt.edu6.txt in FirstBranch
+ 17)git add -A 
+ 18) git commit -a -m "Addding to Rebasing"
+//inside FirstBranch
+19)git rebase master  (O/P:-Current branch FirstBranch is up to date.)
+
+
+//inside master branch 
+20)git rebase FirstBranch
+	(O/P:-- First, rewinding head to replay your work on top of it...
+			Fast-forwarded master to FirstBranch.
+			)
+	ls:--shows all new  files in master branch edu5.txt.edu6.txt..it merge all FirstBranch To Master
+
+
+
+
+---------------------------------------------------------
+//After Doing all changes localy And After adding (ommits) all files to LR time to add all changes in RR(gitHub)
+
+
+for pulling or connecting we have used https://github.com/vikrammasurkar/GitEduTest.git
+
+for pushing have to connect through SSH :   git@github.com:vikrammasurkar/GitEduTest.git (this Option found in gitHub account Clone Or Download)
+
+
+21) ssh-keygen  (After enter jst enter enter ..it create ssh key in one folder )
+
+22)cat  /c/Users/ezone/.ssh/id_rsa.pub   (to check SSh Key ...Path is shown in terminal ..)
+
+
+
+// to add this ssh key to RR .go to gitHub ..go to settings....SSh and GPG Key--copy ssh key from gitbash...pase it in ssh key space and generate ..
+//
+
+22) ssh -T vikrammasurkar007@gmail.com (authentication)
+
+23) git push origin FirstBranch				(push FirstBranch To RR Entire Branch is pushed)
+
+
+24)
+
+---------------------------------
+//revert changes....create file ..commit...update file commit...want first changes..
+//
+//git log      go to git log copy first 8 digits of hexadecilam code
+
+25)git checkout 1804037d revert.txt      (revert  to required version)
+
+
+
+
+---------------------------------------------------------------
+Add git In eclipse
+
+
+Step 1 : Create GitHub account and SignIn
+
+Step 2 : Start a Project = Create a repository
+
+Step 3 : Start Eclipse
+
+Step 4 : Goto Perspective - Git Repositories and click on Add Git Repo..Add Http://  repo url...
+
+Step 5 : Create a project in Eclipse
+
+Step 6 : Do a right click on Project - Team - Share - Add to git repo
+
+Step 7 : Commit and Push the project to the repo
+
+Step 8 : Commit and Push every change to the repo
